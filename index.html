@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vani Niketan | Excellence in Education</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#102747;--blue:#2563eb;--gold:#f6bd60;--light:#f5f8fc}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:#17243a;background:white;line-height:1.6}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:10;background:#fff;box-shadow:0 3px 20px #0001;padding:14px 6%;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:20px;font-weight:800;color:var(--navy)}
+.logo span{color:var(--blue)}
+.links{display:flex;gap:22px;font-size:14px;font-weight:600}
+.links a:hover{color:var(--blue)}
+.menu{display:none;background:none;border:0;font-size:25px}
+.hero{min-height:570px;display:flex;align-items:center;padding:70px 7%;color:white;background:linear-gradient(90deg,#0b1c35ed,#0b1c3580),url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-content{max-width:650px;animation:up .9s ease}
+.tag{color:var(--gold);font-size:12px;letter-spacing:3px;font-weight:bold}
+h1{font-size:clamp(38px,7vw,68px);line-height:1.12;margin:18px 0}
+.hero p{color:#e0e8f5;font-size:17px;max-width:540px}
+.btn{display:inline-block;padding:13px 22px;border-radius:8px;font-weight:bold;margin:25px 10px 0 0;background:var(--gold);color:#17243a;border:0;cursor:pointer}
+.btn.outline{border:1px solid #ffffff90;color:white;background:transparent}
+section{padding:75px 7%}
+.heading{text-align:center;margin-bottom:38px}
+.heading small{color:var(--blue);font-weight:bold;letter-spacing:2px}
+.heading h2{font-size:clamp(28px,4vw,40px);color:var(--navy);margin:8px 0}
+.heading p{color:#718096;max-width:600px;margin:auto}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--navy);color:white;padding:30px 6%;gap:20px;text-align:center}
+.stats strong{display:block;font-size:30px;color:var(--gold)}
+.stats span{font-size:13px;color:#d7e1f0}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about img{width:100%;height:350px;object-fit:cover;border-radius:16px}
+.about h2{font-size:34px;color:var(--navy);line-height:1.2;margin:12px 0}
+.about p{color:#65738a;margin-top:12px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;border:1px solid #e8edf5;border-radius:14px;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-7px);box-shadow:0 15px 35px #10274715}
+.card img{width:100%;height:190px;object-fit:cover}
+.card-body{padding:22px}
+.card h3{color:var(--navy);margin-bottom:8px}
+.card p{font-size:14px;color:#718096}
+.programs{background:var(--light)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px;transition:.3s;cursor:pointer}
+.gallery img:hover{transform:scale(1.025)}
+.video-box{max-width:850px;margin:auto;background:var(--navy);padding:12px;border-radius:16px;box-shadow:0 15px 40px #10274720}
+.video-box iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:10px;display:block}
+.video-note{text-align:center;font-size:13px;color:#718096;margin-top:14px}
+.contact{background:var(--light)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.contact-info,.contact-form{background:white;border-radius:15px;padding:28px}
+.contact-info p{margin:16px 0;color:#607087}
+input,textarea{width:100%;padding:13px;margin:7px 0 13px;border:1px solid #dce3ed;border-radius:8px;font:inherit}
+textarea{height:110px;resize:vertical}
+footer{background:#0b1c35;color:#d7e1f0;padding:40px 7% 20px}
+.footer-top{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+footer h3{color:white;margin-bottom:10px}
+footer p{font-size:13px;color:#aab8cc}
+footer a{color:var(--gold)}
+.copyright{text-align:center;border-top:1px solid #ffffff20;margin-top:28px;padding-top:18px;font-size:12px}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s,transform .7s}
+.reveal.show{opacity:1;transform:translateY(0)}
+@keyframes up{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){
+ .links{display:none;position:absolute;top:60px;left:0;width:100%;background:white;padding:20px;flex-direction:column;gap:15px}
+ .links.open{display:flex}.menu{display:block}
+ .hero{min-height:520px;padding:55px 6%}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .about,.contact-grid{grid-template-columns:1fr}
+ .features{grid-template-columns:1fr}
+ .gallery{grid-template-columns:repeat(2,1fr);gap:9px}
+ .gallery img{height:150px}
+ section{padding:55px 6%}
+ .about img{height:260px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#home">VANI <span>NIKETAN.</span></a>
+  <div class="links" id="links">
+    <a href="#home">Home</a><a href="#about">About</a>
+    <a href="#programs">Facilities</a><a href="#gallery">Gallery</a>
+    <a href="#videos">Videos</a><a href="#contact">Contact</a>
+  </div>
+  <button class="menu" onclick="document.getElementById('links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
+</nav>
+
+<header class="hero" id="home">
+ <div class="hero-content">
+   <div class="tag">LEARN • GROW • SUCCEED</div>
+   <h1>Welcome to Vaniniketan.</h1>
+   <p>A learning environment where curiosity grows, talents shine, and every student gets the opportunity to reach their potential.</p>
+   <a class="btn" href="#about">Discover Our School ↗</a>
+   <a class="btn outline" href="#contact">Get in Touch</a>
+ </div>
+</header>
+
+<div class="stats">
+ <div><strong>01</strong><span>Learning First</span></div>
+ <div><strong>100%</strong><span>Focus on Growth</span></div>
+ <div><strong>∞</strong><span>Possibilities</span></div>
+ <div><strong>1</strong><span>Bright Future</span></div>
+</div>
+
+<section id="about">
+ <div class="about reveal">
+  <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=85" alt="Students learning together" loading="lazy">
+  <div>
+   <div class="tag" style="color:#2563eb">ABOUT OUR SCHOOL</div>
+   <h2>Education That Goes Beyond Books.</h2>
+   <p>We believe education is more than examinations. It is about building confidence, creativity, discipline, and the skills students need for the future.</p>
+   <p>Our goal is to encourage every learner to explore their interests, ask questions, and become a responsible individual.</p>
+   <a class="btn" href="#programs">Explore Facilities ↗</a>
+  </div>
+ </div>
+</section>
+
+<section class="programs" id="programs">
+ <div class="heading reveal"><small>THE LEARNING EXPERIENCE</small><h2>Designed for Discovery</h2><p>A supportive environment for academic learning, creativity, and personal development.</p></div>
+ <div class="features">
+  <article class="card reveal">
+   <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=700&q=80" alt="Classroom learning" loading="lazy">
+   <div class="card-body"><h3>Academic Learning</h3><p>Build strong foundations through learning, practice, curiosity, and problem-solving.</p></div>
+  </article>
+  <article class="card reveal">
+   <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=700&q=80" alt="School campus" loading="lazy">
+   <div class="card-body"><h3>Campus Life</h3><p>A space for students to learn, connect, discover interests, and create memories.</p></div>
+  </article>
+  <article class="card reveal">
+   <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=700&q=80" alt="Students working together" loading="lazy">
+   <div class="card-body"><h3>Teamwork & Growth</h3><p>Encouraging communication, cooperation, confidence, and creative thinking.</p></div>
+  </article>
+ </div>
+</section>
+
+<section id="gallery">
+ <div class="heading reveal"><small>OUR MOMENTS</small><h2>Life Around Our School</h2><p>A glimpse of learning, friendship, and discovery.</p></div>
+ <div class="gallery reveal">
+  <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="Classroom" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=600&q=80" alt="Students together" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="Study time" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80" alt="School building" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=600&q=80" alt="Students studying" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" alt="Class activity" loading="lazy">
+ </div>
+</section>
+
+<section id="videos" class="programs">
+ <div class="heading reveal"><small>WATCH & EXPLORE</small><h2>School Video Showcase</h2><p>Use this space for a campus tour, annual day highlights, or school activities.</p></div>
+ <div class="video-box reveal">
+  <iframe src="https://www.youtube-nocookie.com/embed/ysz5S6PUM-U" title="Video showcase placeholder" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ </div>
+ <p class="video-note">Demo video placeholder — replace it with your school's own video when available.</p>
+</section>
+
+<section class="contact" id="contact">
+ <div class="heading reveal"><small>LET'S CONNECT</small><h2>Get in Touch</h2><p>Have a question about admissions or school activities? Contact the school team.</p></div>
+ <div class="contact-grid reveal">
+  <div class="contact-info">
+   <h3>We'd Love to Hear From You</h3>
+   <p>📍 <strong>Location</strong><br>Karimnagar, Telangana, India</p>
+   <p>🎓 <strong>Admissions & Enquiries</strong><br>Contact the school office for accurate information.</p>
+   <p>🕒 <strong>Office Hours</strong><br>Please confirm timings with the school.</p>
+  </div>
+  <form class="contact-form" onsubmit="event.preventDefault();alert('Demo form only. Connect an email service to receive messages.');">
+   <label for="name">Your Name</label><input id="name" placeholder="Enter your name" required>
+   <label for="email">Email Address</label><input id="email" type="email" placeholder="you@example.com" required>
+   <label for="message">Your Message</label><textarea id="message" placeholder="How can we help?" required></textarea>
+   <button class="btn" type="submit" style="margin-top:0">Send Message ↗</button>
+  </form>
+ </div>
+</section>
+
+<footer>
+ <div class="footer-top">
+  <div><h3>VANI NIKETAN.</h3><p>Learning today. Leading tomorrow.</p></div>
+  <div><h3>Explore</h3><p><a href="#about">About Us</a></p><p><a href="#gallery">Gallery</a></p><p><a href="#contact">Contact</a></p></div>
+  <div><h3>Our Vision</h3><p>Curiosity, confidence, character, and lifelong learning.</p></div>
+ </div>
+ <div class="copyright">© <span id="year"></span> Vani Niketan. Website demonstration.</div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const observer = new IntersectionObserver(entries => {
+ entries.forEach(entry => {
+  if(entry.isIntersecting){
+   entry.target.classList.add('show');
+   observer.unobserve(entry.target);
+  }
+ });
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.querySelectorAll('.links a').forEach(link=>{
+ link.addEventListener('click',()=>document.getElementById('links').classList.remove('open'));
+});
+</script>
+</body>
+</html>
+
